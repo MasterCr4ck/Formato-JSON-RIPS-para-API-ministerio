@@ -22,7 +22,8 @@ def main():
         while not salir:
             print("Bienvenido al codificador base64\n")
 
-            carpeta = "Archivos a leer"
+            carpeta_base = os.path.dirname(os.path.abspath(__file__))
+            carpeta = os.path.join(carpeta_base, "Archivos a leer")
             
             if not os.path.exists(carpeta):
                 os.makedirs(carpeta)
